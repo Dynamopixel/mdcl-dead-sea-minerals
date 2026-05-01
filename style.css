@@ -881,7 +881,7 @@ h5.wcu-label {
     margin-top: 15px;
 }
 
-/* form input {
+.foot-formmm input {
     padding: 10px;
     border: none;
     background: transparent;
@@ -889,14 +889,15 @@ h5.wcu-label {
     color: #ffff;
 }
 
- form input::placeholder {
+ .foot-formmm input::placeholder {
     color: #ffff;
     opacity: 1;
 
 }
- form input:focus {
+ .foot-formmm input:focus {
     outline: none;
-    box-shadow: none; /* Bootstrap ke liye */
+    box-shadow: none; 
+ }
 
 
 .footer-bottom {
