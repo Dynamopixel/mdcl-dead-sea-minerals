@@ -1479,6 +1479,10 @@ h5.wcu-label {
         padding-right: 40px;
     }
 
+      .hero-banner {
+        background: url('images/back-banner.png') center center / cover no-repeat;
+    }
+
     .cta-specialists {
         padding-top: 50px;
     }
