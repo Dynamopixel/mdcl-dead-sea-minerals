@@ -177,7 +177,7 @@ section {
 
 /* toggler */
 .navbar-toggler {
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 2px solid rgb(0 0 0 / 51%);
     padding: 8px 10px;
     border-radius: 10px;
 }
@@ -908,8 +908,7 @@ h5.wcu-label {
 
 .myform input {
     padding: 12px 20px;
-    width: 250px;
-    /* fixed ya % hata do */
+
     border: 1px solid #bcbcbc;
 }
 
@@ -961,7 +960,7 @@ h5.wcu-label {
 /* ─── SECTION WRAPPER ─── */
 .reviews-section {
     padding-left: 250px;
-    background: #fcfcfc;
+    background: #f9f9f9;
 }
 
 /* ─── LEFT PANEL ─── */
@@ -969,7 +968,7 @@ h5.wcu-label {
     border-radius: 8px;
     padding: 32px 28px 36px;
     position: relative;
-    background: #fcfcfc;
+        background: #f9f9f9;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1035,7 +1034,7 @@ h5.wcu-label {
 .right-panel {
     border-radius: 8px;
     padding: 28px 20px;
-    background: #fff;
+    background: #f9f9f9;
     overflow: hidden;
 }
 
@@ -1663,7 +1662,17 @@ h5.wcu-label {
         margin: 0 20px;
         background: transparent !important;
     }
+ #mdclNavbar {
+        width: 100%;
+        background: #133967;
+        z-index: 999;
+        padding: 10px 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
 
+    .navbar {
+        position: relative;
+    }
 
     .container-custom {
         width: 100%;
@@ -1723,7 +1732,7 @@ h5.wcu-label {
 }
 
 .cardss .col-md-6:nth-child(4) {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
     .btn-hero-primary {
@@ -1873,6 +1882,7 @@ h5.wcu-label {
         width: 390px;
         height: 583px !important;
         cursor: pointer;
+        over
     }
 
 }

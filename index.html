@@ -36,29 +36,26 @@
                     <img src="images/logo.png" alt="MDCL Logo" height="40">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mdclNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- Mobile right section -->
+                <div class="d-flex align-items-center mobile-actions">
+                    <button class="btn-custom btn-navy me-2 d-lg-none">English</button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mdclNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
 
                 <div class="collapse navbar-collapse" id="mdclNavbar">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#">Who We Are</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#">Our Solutions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#">Contact Us</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Who We Are</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Our Solutions</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Contact Us</a></li>
                     </ul>
                 </div>
 
-                <button class="btn-custom btn-navy">English</button>
-
+                <!-- Desktop English button -->
+                <button class="btn-custom btn-navy d-none d-lg-block">English</button>
 
             </div>
         </nav>
@@ -525,14 +522,14 @@
     <section class="certifications-section">
         <div class="container">
 
-         
+
             <div class="cert-row row-1">
-     
+
                 <div class="left-content">
                     <span class="section-tag">MDCL</span>
                 </div>
 
-                
+
                 <div class="right-logos two-logos">
                     <div class="cert-box">
                         <img src="images/gmlogo.png" alt="GMP+">
@@ -543,9 +540,9 @@
                 </div>
             </div>
 
-       
+
             <div class="cert-row row-2">
-          <div class="left-content">
+                <div class="left-content">
                     <h2>
                         Most of our products<br>
                         carry the following<br>
@@ -553,7 +550,7 @@
                     </h2>
                 </div>
 
-              
+
                 <div class="right-logos two-logos start-align">
                     <div class="cert-box">
                         <img src="images/gmplogo.png" alt="GMP">
@@ -585,25 +582,25 @@
     <!-- product card slider start herer -->
     <section class="products-section">
 
-    
+
         <div class="top-bar">
             <h5 class="wcu-label my-4 my-lg-4 ">Mdcl - Dead sea minerals</h5>
             <button class="products-families-btn mt-5">Our Products Families</button>
         </div>
 
-     
+
         <h2 class="section-heading">Our key products are featured below.</h2>
 
-      
+
         <div class="slider-overflow-clip mt-lg-5">
             <div class="slider-wrapper">
 
-            
+
                 <button class="arrow-prev" id="prevBtn"><i class="bi bi-arrow-left"></i></button>
 
                 <div class="products-slider">
 
-                
+
                     <div class="product-slide">
                         <div class="product-card">
                             <img src="images/bluebgg.png" />
@@ -614,7 +611,7 @@
                         </div>
                     </div>
 
-                 
+
                     <div class="product-slide">
                         <div class="product-card">
                             <img src="images/goli.png" />
@@ -625,7 +622,7 @@
                         </div>
                     </div>
 
-              
+
                     <div class="product-slide">
                         <div class="product-card">
                             <img src="images/crystal.png" />
@@ -646,7 +643,7 @@
                         </div>
                     </div>
 
-            
+
                     <div class="product-slide">
                         <div class="product-card">
                             <img src="images/goli.png" />
@@ -657,7 +654,7 @@
                         </div>
                     </div>
 
-           
+
                     <div class="product-slide">
                         <div class="product-card">
                             <img src="images/crystal.png" />
@@ -670,7 +667,7 @@
 
                 </div>
 
-          
+
                 <button class="arrow-next" id="nextBtn"><i class="bi bi-arrow-right"></i></button>
 
             </div>
@@ -758,7 +755,7 @@
 
 
 
-                    </div><!-- /.reviews-slider -->
+                    </div>
                 </div><!-- /.right-panel -->
             </div>
 
@@ -787,22 +784,28 @@
 
             <!-- LOGO GRID -->
             <div class="row justify-content-center myform">
-                <form>
+                <form id="mainForm" action="https://formspree.io/f/xjglyorw" method="POST">
+
                     <div class="d-flex gap-3 justify-content-center">
-                        <input type="text" placeholder="NAME">
-                        <input type="text" placeholder="EMAIL ADDRESS">
+                        <input type="text" name="name" placeholder="NAME" required>
+
+                        <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
                     </div>
 
                     <div class="d-flex align-items-center gap-2 my-4 justify-content-center">
-                        <input type="radio" id="terms">
+                        <input type="checkbox" name="terms" id="terms" required>
                         <label for="terms" class="mb-0">
                             I accept The Terms for processing personal data
                         </label>
                     </div>
 
                     <div class="text-center">
-                        <button class="btn-custom">Send request</button>
+                        <button type="submit" class="btn-custom">Send request</button>
                     </div>
+
+                    <!-- message -->
+                    <div id="mainFormMessage" style="margin-top:10px; display:none;"></div>
+
                 </form>
             </div>
 
@@ -868,9 +871,15 @@
                     <div class="col-lg-3 col-md-6">
                         <h5 class="fw-normal">Newsletter</h5>
 
-                        <form class="foot-formmm">
-                            <input type="text" class="w-100" placeholder="YOUR EMAIL">
-                            <button class="btn-cta mt-4">Subscribe</button>
+                        <form id="footerForm" class="foot-formmm" action="https://formspree.io/f/xjglyorw"
+                            method="POST">
+
+                            <input type="email" name="email" class="w-100" placeholder="YOUR EMAIL" required>
+
+                            <button type="submit" class="btn-cta mt-4">Subscribe</button>
+
+                            <!-- Inline message -->
+                            <div id="formMessage" style="margin-top:10px; display:none;"></div>
                         </form>
 
                     </div>
