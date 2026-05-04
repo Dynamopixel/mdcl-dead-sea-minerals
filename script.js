@@ -1,12 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const navbarCollapse = document.getElementById('mdclNavbar');
+    const toggler = document.querySelector('.navbar-toggler');
 
-document.querySelectorAll('#mdclNavbar .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        let navbar = document.getElementById('mdclNavbar');
-        let collapse = bootstrap.Collapse.getInstance(navbar);
-        if (collapse) collapse.hide();
+    navbarCollapse.addEventListener('show.bs.collapse', () => {
+        toggler.classList.add('open');
+    });
+
+    navbarCollapse.addEventListener('hide.bs.collapse', () => {
+        toggler.classList.remove('open');
     });
 });
-
 
 document.getElementById('footerForm').addEventListener('submit', function(e){
     e.preventDefault(); // prevent page reload
@@ -25,7 +28,7 @@ document.getElementById('footerForm').addEventListener('submit', function(e){
     .then(response => {
         if (response.ok) {
             messageDiv.style.display = 'block';
-            messageDiv.style.color = 'green';
+            messageDiv.style.color = 'white';
             messageDiv.innerText = 'Thanks for subscribing!';
             form.reset();
         } else {
@@ -74,33 +77,23 @@ document.getElementById('mainForm').addEventListener('submit', function(e){
     });
 });
 
-$(document).ready(function () {
-    $('.reviews-slider').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      arrows: false,
-      infinite: true,
-      speed: 400,
-      responsive: [
+$('.reviews-slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: true,
+    speed: 400,
+    adaptiveHeight: true,  
+    responsive: [
         {
-          breakpoint: 992,
-          settings: { slidesToShow: 1 }
-        },
-        {
-          breakpoint: 768,
-          settings: { slidesToShow: 1 }
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
         }
-      ]
-    });
- 
-    $('#prevBtn').on('click', function () {
-      $('.reviews-slider').slick('slickPrev');
-    });
- 
-    $('#nextBtn').on('click', function () {
-      $('.reviews-slider').slick('slickNext');
-    });
-  });
+    ]
+});
 
 
   $(document).ready(function () {
