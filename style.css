@@ -696,48 +696,88 @@ h5.wcu-label {
 /* ==========================================
    LOGO GRID
    ========================================== */
-.certifications-grid {
-    margin-top: 65px;
+/* .certifications-section {
+    background: #ffffff;
+    padding: 80px 0;
+} */
+
+/* Common Row */
+.cert-row {
+    display: flex;
+    align-items: center;
+    margin: 50px;
 }
 
-/* card */
-.cert-logo-card {
-    background: #fff;
-    border-radius: 22px;
-    min-height: 150px;
+/* Left Side Width */
+.left-content {
+    width: 42%;
+}
 
+/* Right Side Width */
+.right-logos {
+    width: 58%;
+    display: flex;
+    gap: 20px;
+}
+
+/* Row 1 = logos right aligned */
+.row-1 .right-logos {
+    justify-content: flex-end;
+}
+
+/* Row 2 + 3 = start aligned */
+.start-align {
+    justify-content: flex-start;
+}
+
+/* Tag */
+.section-tag {
+    display: inline-block;
+    background: #d8edf4;
+    color: #14387f;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding: 14px 30px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-content h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    color: #14387f;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo Box */
+.cert-box {
+    width: 260px;
+    height: 150px;
+    border: 2px solid #11999D;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 28px;
-
-    border: 1px solid rgba(16, 58, 121, 0.08);
-    box-shadow: 0 15px 40px rgba(16, 58, 121, 0.06);
-
-    transition: all 0.3s ease;
+    background: transparent;
+    flex-shrink: 0;
 }
 
-/* logo image */
-.cert-logo-card img {
-    max-height: 65px;
-    width: auto;
+.cert-box img {
+    max-width: 105px;
+    max-height: 80px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.85;
-    transition: all 0.3s ease;
 }
 
-/* hover */
-.cert-logo-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(16, 58, 121, 0.12);
+.cert-box span {
+    font-size: 56px;
+    color: #14387f;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
-.cert-logo-card:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-}
 
 /* certificate logo  */
 
@@ -889,15 +929,16 @@ h5.wcu-label {
     color: #ffff;
 }
 
- .foot-formmm input::placeholder {
+.foot-formmm input::placeholder {
     color: #ffff;
     opacity: 1;
 
 }
- .foot-formmm input:focus {
+
+.foot-formmm input:focus {
     outline: none;
-    box-shadow: none; 
- }
+    box-shadow: none;
+}
 
 
 .footer-bottom {
@@ -917,69 +958,10 @@ h5.wcu-label {
 
 
 
-
-
-.cert-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-/* LEFT */
-.cert-left {
-    flex: 1;
-    max-width: 400px;
-}
-
-.cert-left .badge {
-    display: inline-block;
-    background: #e8f7f8;
-    color: #1d4ed8;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-
-.cert-left h2 {
-    font-size: 32px;
-    line-height: 1.3;
-    color: #0f2f66;
-    font-weight: 600;
-}
-
-/* RIGHT GRID */
-.cert-right {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-/* CARD */
-.cert-card {
-    border: 1px solid #0ea5a5;
-    border-radius: 12px;
-    padding: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    min-height: 90px;
-}
-
-.cert-card img {
-    max-width: 100%;
-    height: 40px;
-    object-fit: contain;
-}
-
-/* slider section start */
-
 /* ─── SECTION WRAPPER ─── */
 .reviews-section {
     padding-left: 250px;
+    background: #fcfcfc;
 }
 
 /* ─── LEFT PANEL ─── */
@@ -987,7 +969,7 @@ h5.wcu-label {
     border-radius: 8px;
     padding: 32px 28px 36px;
     position: relative;
-    background: #fff;
+    background: #fcfcfc;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1170,7 +1152,7 @@ h5.wcu-label {
 }
 
 .products-families-btn {
-    background: linear-gradient(to bottom, #495471,#1D415F );
+    background: linear-gradient(to bottom, #495471, #1D415F);
     border: none;
     border-radius: 25px;
     color: #ffffff;
@@ -1388,6 +1370,39 @@ h5.wcu-label {
         transform: scale(1);
     }
 
+    .cert-row {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 35px;
+    }
+
+    .left-content,
+    .right-logos {
+        width: 100%;
+    }
+
+    .row-1 .right-logos,
+    .start-align {
+        justify-content: flex-start;
+    }
+
+    .row-3 {
+        padding-left: 0;
+    }
+
+    .left-content {
+        margin-bottom: 20px;
+    }
+
+    .left-content h2 {
+        font-size: 46px;
+    }
+
+    .cert-box {
+        width: 180px;
+        height: 90px;
+    }
+
     .business-units h2 {
         font-size: 38px;
     }
@@ -1408,16 +1423,43 @@ h5.wcu-label {
         padding-top: 70px;
     }
 
-    .cert-wrapper {
-        flex-direction: column;
-    }
 
-    .cert-right {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+
+
+    section.reviews-section.container-fluid {
+        padding: 50px 10px;
+    }
+
+
+    .navbar {
+        padding-top: 30px;
+        position: relative;
+        z-index: 99;
+        margin: 0 40px;
+        background: transparent !important;
+    }
+
+    .hero-banner {
+        background: url('/images/back-banner.png') center center / cover no-repeat;
+    }
+
+    .container-custom {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .cta-specialists {
+        padding-top: 50px;
+    }
+
+    .cta-img {
+        max-width: 100%;
+        height: 439px;
+    }
 
     .specialty-minerals {
         padding: 60px 0;
@@ -1500,9 +1542,47 @@ h5.wcu-label {
         font-size: 13px;
     }
 
+    .certifications-section {
+        padding: 55px 0;
+    }
+
+    .cert-row {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-left: 0px;
+        margin-bottom: 35px;
+        margin-right: 0px;
+    }
+
+    .cert-box {
+        width: 167px;
+        height: 110px;
+    }
+
+    .left-content h2 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .cert-box img {
+        max-width: 105px;
+        max-height: 55px;
+        object-fit: contain;
+    }
+
+
+    .sea-text {
+        padding: 0px 50px;
+    }
+
+
     .reviews-section {
-    padding-left: 50px;
-}
+        padding-left: 0px;
+    }
+
+    .left-panel h2 {
+        font-size: 35px;
+    }
 
     .footer-top-bar {
         padding: 42px 0;
@@ -1525,13 +1605,55 @@ h5.wcu-label {
     .footer-bottom {
         text-align: center;
     }
+
+    form .d-flex.gap-3 {
+        /* flex-direction: column; */
+        align-items: center;
+        width: 100%;
+    }
+
+    form .d-flex.gap-3 input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    form .d-flex.align-items-center {
+        flex-direction: row;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+
+    form .d-flex.align-items-center label {
+        font-size: 14px;
+    }
+
+    .product-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        width: 100%;
+        height: 500px !important;
+        cursor: pointer;
+    }
+
+    .connect-line {
+        width: 38%;
+        height: 1px;
+        border-bottom: 2px dashed rgba(16, 58, 121, 0.25);
+        rotate: 90deg;
+        position: absolute;
+        left: -105px;
+        z-index: 10;
+        top: 163px;
+    }
 }
 
 
 @media (max-width: 572px) {
 
     section {
-        padding: 60px 15px !important;
+        padding: 50px 15px !important;
     }
 
     .navbar {
@@ -1540,6 +1662,14 @@ h5.wcu-label {
         z-index: 99;
         margin: 0 20px;
         background: transparent !important;
+    }
+
+
+    .container-custom {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* padding-top: 50px; */
     }
 
     .navbar .container-custom {
@@ -1554,6 +1684,7 @@ h5.wcu-label {
         line-height: 35px;
         margin-right: 10px;
     }
+
 
     .container-custom {
         width: 100%;
@@ -1583,6 +1714,17 @@ h5.wcu-label {
         font-size: 16px;
 
     }
+    .cardss .col-md-6:nth-child(2) {
+    margin-top: 60px;
+}
+
+.cardss .col-md-6:nth-child(3) {
+    margin-top: 30px;
+}
+
+.cardss .col-md-6:nth-child(4) {
+    margin-top: 40px;
+}
 
     .btn-hero-primary {
         font-size: 17px !important;
@@ -1651,15 +1793,137 @@ h5.wcu-label {
         padding: 0px 0 25px;
     }
 
-    .cert-right {
-        grid-template-columns: 1fr;
+    .reviews-section {
+        padding-left: 0px;
     }
 
-    .cert-left h2 {
-        font-size: 24px;
+    .cert-box {
+        width: 136px;
+        height: 89px;
     }
-    .reviews-section {
-    padding-left: 0px;
+
+    .left-content h2 {
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    .cert-box img {
+        max-width: 105px;
+        max-height: 49px;
+        object-fit: contain;
+    }
+
+    .cnt-title {
+        font-size: 28px;
+        font-weight: 400;
+        color: #000;
+        line-height: 1.25;
+        margin-bottom: 22px;
+    }
+
+    form .d-flex.gap-3 input {
+        max-width: 100%;
+    }
+
+    form .d-flex.gap-3 {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .btn-custom {
+        max-width: 100%;
+    }
+
+    .left-panel h2 {
+        font-size: 30px;
+    }
+
+    .left-panel {
+        border-radius: 8px;
+        padding: 0px 10px;
+    }
+
+    .section-heading {
+        font-size: 17px;
+        font-weight: 400;
+        text-align: center;
+
+    }
+
+    .top-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .top-bar h5 {
+        margin-bottom: 10px;
+    }
+
+    .products-families-btn {
+        margin-top: 0 !important;
+    }
+
+    .product-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        width: 390px;
+        height: 583px !important;
+        cursor: pointer;
+    }
+
 }
+
+
+@media (max-width: 425px) {
+
+    section {
+        padding: 20px 0px;
+    }
+
+    .navbar-brand img {
+        height: 32px;
+        width: auto;
+    }
+
+    .cert-box {
+        width: 103px;
+        height: 77px;
+    }
+
+    .section-tag {
+        display: inline-block;
+        background: #d8edf4;
+        color: #14387f;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        padding: 13px 18px;
+        border-radius: 4px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .cert-row {
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .left-content h2 {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .row-2 {
+        margin: 0 !important;
+    }
+
+    .cert-row.row-3 {
+        margin: 32px 0px;
+    }
+
 
 }
