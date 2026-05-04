@@ -85,7 +85,7 @@ section {
 
 /*     HERO BANNER  */
 .hero-banner {
-    /* background: url('images/back-banner.png') center center / contain no-repeat; */
+    background: url("images/back-banner.png") center center / contain no-repeat;
     background-color: rgb(255, 255, 255) !important;
     min-height: 100vh;
     position: relative;
@@ -1471,10 +1471,6 @@ h5.wcu-label {
         z-index: 99;
         margin: 0 40px;
         background: transparent !important;
-    }
-
-    .hero-banner {
-        background: url('images/back-banner.png') center center / cover no-repeat;
     }
 
     .container-custom {
