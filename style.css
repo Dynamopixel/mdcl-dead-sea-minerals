@@ -1442,7 +1442,7 @@ h5.wcu-label {
     }
 
     .hero-banner {
-        background: url('/images/back-banner.png') center center / cover no-repeat;
+        background: url('images/back-banner.png') center center / cover no-repeat;
     }
 
     .container-custom {
