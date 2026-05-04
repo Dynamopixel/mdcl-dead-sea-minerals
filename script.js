@@ -83,10 +83,10 @@ $('.reviews-slider').slick({
     arrows: false,
     infinite: true,
     speed: 400,
-    adaptiveHeight: true,  
+    adaptiveHeight: true,
     responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 992,   // 🔥 tablet + mobile
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
